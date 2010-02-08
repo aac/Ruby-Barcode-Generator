@@ -37,8 +37,6 @@ def draw(width, lines)
     cursor_x = cursor_x + px
   end
 
-  puts cursor_x
-
   bars.draw(barcode)
   barcode.display
   barcode

@@ -29,8 +29,6 @@ def upc_checksum digits
   val1 = digits.values_at(1,3,5,7,9).inject(0) {|sum,n| sum+n}
   sum = val0 + val1
 
-  puts "sum: #{sum}"
-
   next_multiple_of_ten = ((sum+9)/10)*10
   next_multiple_of_ten - sum
 end
