@@ -21,8 +21,6 @@ def draw(width, lines)
   height = BORDER * 2 + MODULE_HEIGHT
   barcode = Magick::Image.new(width, height)
 
-  puts "{#{width},#{height}}"
-
   cursor_x = BORDER;
   cursor_y = BORDER;
   bars = Magick::Draw.new
@@ -35,9 +33,6 @@ def draw(width, lines)
     px = line * MODULE_WIDTH
     draw_bar(bars, cursor_x, cursor_y, px, MODULE_HEIGHT) if draw_line
     
-    puts "#{cursor_x} #{line} #{draw_line}"
-
-
     draw_line = !draw_line
     cursor_x = cursor_x + px
   end
